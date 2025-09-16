@@ -17,16 +17,15 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 # =========================
 load_dotenv()
 
-TOKEN = os.getenv("TOKEN")
-FILE = os.getenv("FILE_PATH")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-if not TOKEN:
-    raise ValueError("❌ TOKEN not found in .env file")
-if not FILE:
-    raise ValueError("❌ FILE_PATH not found in .env file")
+# CSV file (Revenue!.csv) inside the same folder
+FILE = os.getenv("FILE_PATH", os.path.join(BASE_DIR, "Revenue!.csv"))
 
-# =========================
+# PDF reports folder (Last month reports) inside the same folder
+REPORTS_DIR = os.getenv("REPORTS_DIR", os.path.join(BASE_DIR, "Last month reports"))
+
+# ========================
 # Setup Logging to File
 # =========================
 logging.basicConfig(
@@ -1235,7 +1234,7 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
                 await query.edit_message_text("❌ Selection out of range.")
                 return
             file_name = session.selected_reports[index]
-            folder_path = r"D:\TelegramBot\Last month reports"
+            folder_path = REPORTS_DIR
             file_path = os.path.join(folder_path, file_name)
             if os.path.exists(file_path):
                 with open(file_path, 'rb') as f:
@@ -1878,7 +1877,7 @@ async def last(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def report(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # Use the specified path for the reports folder
-        folder_path = r"D:\TelegramBot\Last month reports"
+        folder_path = REPORTS_DIR
         logger.info(f"Checking folder: {folder_path}")
 
         if not os.path.exists(folder_path):
@@ -2012,7 +2011,7 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TOKEN).build()
 
-    # Command handlers
+    # ✅ Command handlers
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("help", help_cmd))
     app.add_handler(CommandHandler("trends", trends))
@@ -2029,17 +2028,24 @@ def main():
     app.add_handler(CommandHandler("ai", ai))
     app.add_handler(CommandHandler("report", report))
 
-    # Callback query handler
+    # ✅ Callback query handler
     app.add_handler(CallbackQueryHandler(handle_callback_query))
 
-    # Message handlers
+    # ✅ Message handlers
     app.add_handler(MessageHandler(
         filters.TEXT & ~filters.COMMAND,
         handle_main_menu
     ))
 
-    logger.info("🚀 Revenue Bot Plus Smart is running... (With Fixed Interactive Keyboards)")
-    app.run_polling()
+    logger.info("🚀 Revenue Bot is running via Webhook...")
+
+    # ---🔗 Webhook Settings for Render ---
+    app.run_webhook(
+        listen="0.0.0.0",
+        port=int(os.getenv("PORT", 10000)),
+        webhook_url=f"{os.getenv('RENDER_EXTERNAL_URL')}/webhook"
+    )
+
 
 if __name__ == "__main__":
     main()
