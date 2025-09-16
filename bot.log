@@ -1,0 +1,20 @@
+2025-09-16 14:02:46,417 - __main__ - INFO - \U0001f9e0 Gemini AI Agent is ready.
+2025-09-16 14:02:46,510 - __main__ - INFO - \u2705 Loaded CSV: 11928 rows
+2025-09-16 14:02:46,510 - __main__ - INFO - \U0001f9f9 Starting safe data cleaning...
+2025-09-16 14:02:46,678 - __main__ - INFO - \u2705 Cleaned  4848 rows remaining
+2025-09-16 14:02:56,157 - __main__ - INFO - \U0001f9e0 Gemini AI Agent is ready.
+2025-09-16 14:02:56,181 - __main__ - INFO - \u2705 Loaded CSV: 11928 rows
+2025-09-16 14:02:56,181 - __main__ - INFO - \U0001f9f9 Starting safe data cleaning...
+2025-09-16 14:02:56,351 - __main__ - INFO - \u2705 Cleaned  4848 rows remaining
+2025-09-16 14:11:25,661 - __main__ - INFO - \U0001f9e0 Gemini AI Agent is ready.
+2025-09-16 14:11:25,685 - __main__ - INFO - \u2705 Loaded CSV: 11928 rows
+2025-09-16 14:11:25,739 - __main__ - INFO - \U0001f9f9 Starting safe data cleaning...
+2025-09-16 14:11:25,918 - __main__ - INFO - \u2705 Cleaned  4848 rows remaining
+2025-09-16 14:15:43,878 - __main__ - INFO - \U0001f9e0 Gemini AI Agent is ready.
+2025-09-16 14:15:43,904 - __main__ - INFO - \u2705 Loaded CSV: 11928 rows
+2025-09-16 14:15:43,904 - __main__ - INFO - \U0001f9f9 Starting safe data cleaning...
+2025-09-16 14:15:44,073 - __main__ - INFO - \u2705 Cleaned  4848 rows remaining
+2025-09-16 14:24:41,936 - __main__ - INFO - \U0001f9e0 Gemini AI Agent is ready.
+2025-09-16 14:24:41,960 - __main__ - INFO - \u2705 Loaded CSV: 11928 rows
+2025-09-16 14:24:41,961 - __main__ - INFO - \U0001f9f9 Starting safe data cleaning...
+2025-09-16 14:24:42,138 - __main__ - INFO - \u2705 Cleaned  4848 rows remaining
