@@ -1,11 +1,11 @@
 import re
 import os
-import logging
 from datetime import datetime
 from difflib import get_close_matches
 from functools import lru_cache
 from io import BytesIO
 from dotenv import load_dotenv
+import logging
 import pandas as pd
 import matplotlib.pyplot as plt
 import google.generativeai as genai
@@ -19,11 +19,15 @@ load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# CSV file (Revenue!.csv) inside the same folder
+# === 🔑 Read Environment Variables FIRST ===
+TOKEN = os.getenv("TOKEN")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 FILE = os.getenv("FILE_PATH", os.path.join(BASE_DIR, "Revenue!.csv"))
-
-# PDF reports folder (Last month reports) inside the same folder
 REPORTS_DIR = os.getenv("REPORTS_DIR", os.path.join(BASE_DIR, "Last month reports"))
+
+if not TOKEN:
+    raise ValueError("❌ TOKEN not found in environment variables")
+
 
 # ========================
 # Setup Logging to File
