@@ -11467,60 +11467,60 @@ RNR,,,2025/Jul/2,0,0,1059678,2025,Jul,1
 Orange,RNR,Orange,2025/Jul/3,0,0,955337,2025,Jul,1
 Vodafone,RNR,Vodafone,2025/Jul/4,0,0,0,2025,Jul,1
 Etisalat,RNR,Etisalat,2025/Jul/5,0,0,104341,2025,Jul,1
-Total  Revenues ,,,2025/Aug/1,712380552,712380552,1125470096,2025,Aug,1
- Infrastructure Revenues,,,2025/Aug/1,374464431,374464431,828037502,2025,Aug,1
- Transmission Revenues,,,2025/Aug/1,259579158,259579158,676575457,2025,Aug,1
+Total  Revenues ,,,2025/Aug/1,712380552,712380552,1141931114,2025,Aug,1
+ Infrastructure Revenues,,,2025/Aug/1,374464431,374464431,841829826.7,2025,Aug,1
+ Transmission Revenues,,,2025/Aug/1,259579158,259579158,676415429.5,2025,Aug,1
 MNO's Transmission,,,2025/Aug/1,217385000,217385000,251064675,2025,Aug,1
-Orange,MNO's Transmission,Orange,2025/Aug/1,59095833,59095833,91342583,2025,Aug,1
+Orange,MNO's Transmission,Orange,2025/Aug/1,59095833,59095833,91342583.33,2025,Aug,1
 Vodafone,MNO's Transmission,Vodafone,2025/Aug/1,80226667,80226667,81658175,2025,Aug,1
-Etisalat,MNO's Transmission,Etisalat,2025/Aug/1,78062500,78062500,78063917,2025,Aug,1
-TX IRU ,,,2025/Aug/1,0,0,381584711,2025,Aug,1
-Orange,TX IRU ,Orange,2025/Aug/1,0,0,377657353,2025,Aug,1
+Etisalat,MNO's Transmission,Etisalat,2025/Aug/1,78062500,78062500,78063916.67,2025,Aug,1
+TX IRU ,,,2025/Aug/1,0,0,381414027.7,2025,Aug,1
+Orange,TX IRU ,Orange,2025/Aug/1,0,0,377486669.9,2025,Aug,1
 Vodafone,TX IRU ,Vodafone,2025/Aug/1,0,0,0,2025,Aug,1
 Etisalat,TX IRU ,Etisalat,2025/Aug/1,0,0,3664200,2025,Aug,1
-NCTS,TX IRU ,Others,2025/Aug/1,0,0,263158,2025,Aug,1
-ISP's Transmission ,,,2025/Aug/1,42194158,42194158,43926071,2025,Aug,1
-Orange Data,ISP's Transmission ,Orange,2025/Aug/1,3070833,3070833,4514397,2025,Aug,1
-Vodafone Data,ISP's Transmission ,Vodafone,2025/Aug/1,10940000,10940000,10957737,2025,Aug,1
+NCTS,TX IRU ,Others,2025/Aug/1,0,0,263157.8947,2025,Aug,1
+ISP's Transmission ,,,2025/Aug/1,42194158,42194158,43936726.78,2025,Aug,1
+Orange Data,ISP's Transmission ,Orange,2025/Aug/1,3070833,3070833,4514397.083,2025,Aug,1
+Vodafone Data,ISP's Transmission ,Vodafone,2025/Aug/1,10940000,10940000,10957736.67,2025,Aug,1
 NOL,ISP's Transmission ,Etisalat,2025/Aug/1,24980000,24980000,24980000,2025,Aug,1
-EGY Net,ISP's Transmission ,Etisalat,2025/Aug/1,1040833,1040833,1040833,2025,Aug,1
-Noor,ISP's Transmission ,Others,2025/Aug/1,2061105,2061105,2319227,2025,Aug,1
+EGY Net,ISP's Transmission ,Etisalat,2025/Aug/1,1040833,1040833,1040833.333,2025,Aug,1
+Noor,ISP's Transmission ,Others,2025/Aug/1,2061105,2061105,2319226.56,2025,Aug,1
 Yalla Misr,ISP's Transmission ,Others,2025/Aug/1,0,0,0,2025,Aug,1
-VSAT,ISP's Transmission ,Others,2025/Aug/1,101386,101386,113877,2025,Aug,1
- Colocation  Revenues,,,2025/Aug/1,80413449,80413449,88522408,2025,Aug,1
-MNO's Colocation,,,2025/Aug/1,70348299,70348299,75734685,2025,Aug,1
-Orange,MNO's Colocation,Orange,2025/Aug/1,18319031,18319031,19728459,2025,Aug,1
-Vodafone,MNO's Colocation,Vodafone,2025/Aug/1,31384343,31384343,34736333,2025,Aug,1
-Etisalat,MNO's Colocation,Etisalat,2025/Aug/1,20644925,20644925,21269893,2025,Aug,1
-ISP's Colocation,,,2025/Aug/1,10065150,10065150,12787723,2025,Aug,1
-Orange Data,ISP's Colocation,Orange,2025/Aug/1,3104386,3104386,3980094,2025,Aug,1
-Vodafone Data,ISP's Colocation,Vodafone,2025/Aug/1,4864674,4864674,6161174,2025,Aug,1
-NOL,ISP's Colocation,Etisalat,2025/Aug/1,1711918,1711918,1437520,2025,Aug,1
-EGY Net,ISP's Colocation,Etisalat,2025/Aug/1,0,0,790414,2025,Aug,1
-Noor,ISP's Colocation,Others,2025/Aug/1,384172,384172,418521,2025,Aug,1
-Yalla Misr,ISP's Colocation,Others,2025/Aug/1,0,0,0,2025,Aug,1
-International Services,,,2025/Aug/1,34471825,34471825,62939637,2025,Aug,1
-IPT,,,2025/Aug/1,0,0,5143697,2025,Aug,1
+VSAT,ISP's Transmission ,Others,2025/Aug/1,101386,101386,124533.1407,2025,Aug,1
+ Colocation  Revenues,,,2025/Aug/1,80413449,80413449,102474759.9,2025,Aug,1
+MNO's Colocation,,,2025/Aug/1,70348299,70348299,78186573.51,2025,Aug,1
+Orange,MNO's Colocation,Orange,2025/Aug/1,18319031,18319031,21708017.7,2025,Aug,1
+Vodafone,MNO's Colocation,Vodafone,2025/Aug/1,31384343,31384343,34780159.39,2025,Aug,1
+Etisalat,MNO's Colocation,Etisalat,2025/Aug/1,20644925,20644925,21698396.42,2025,Aug,1
+ISP's Colocation,,,2025/Aug/1,10065150,10065150,24288186.35,2025,Aug,1
+Orange Data,ISP's Colocation,Orange,2025/Aug/1,3104386,3104386,3863929.41,2025,Aug,1
+Vodafone Data,ISP's Colocation,Vodafone,2025/Aug/1,4864674,4864674,6239912.37,2025,Aug,1
+NOL,ISP's Colocation,Etisalat,2025/Aug/1,1711918,1711918,1455160.723,2025,Aug,1
+EGY Net,ISP's Colocation,Etisalat,2025/Aug/1,0,0,784845.2933,2025,Aug,1
+Noor,ISP's Colocation,Others,2025/Aug/1,384172,384172,443874.8116,2025,Aug,1
+Yalla Misr,ISP's Colocation,Others,2025/Aug/1,0,0,11500463.74,2025,Aug,1
+International Services,,,2025/Aug/1,34471825,34471825,62939637.27,2025,Aug,1
+IPT,,,2025/Aug/1,0,0,5143878.222,2025,Aug,1
 Orange Data,IPT,Orange,2025/Aug/1,0,0,0,2025,Aug,1
-Vodafone Data,IPT,Vodafone,2025/Aug/1,0,0,4310417,2025,Aug,1
-NOL,IPT,Etisalat,2025/Aug/1,0,0,372000,2025,Aug,1
+Vodafone Data,IPT,Vodafone,2025/Aug/1,0,0,4326222.222,2025,Aug,1
+NOL,IPT,Etisalat,2025/Aug/1,0,0,365025,2025,Aug,1
 EGY Net,IPT,Etisalat,2025/Aug/1,0,0,0,2025,Aug,1
 Noor,IPT,Others,2025/Aug/1,0,0,0,2025,Aug,1
-Etisal,IPT,Etisalat,2025/Aug/1,0,0,461280,2025,Aug,1
-IPLCs ,,,2025/Aug/1,34471825,34471825,57795940,2025,Aug,1
-Orange Data,IPLCs ,Orange,2025/Aug/1,6832887,6832887,13498014,2025,Aug,1
-Vodafone Data,IPLCs ,Vodafone,2025/Aug/1,13291664,13291664,21559830,2025,Aug,1
-NOL,IPLCs ,Etisalat,2025/Aug/1,14347274,14347274,10204437,2025,Aug,1
-EGY Net,IPLCs ,Etisalat,2025/Aug/1,0,0,12523988,2025,Aug,1
+Etisal,IPT,Etisalat,2025/Aug/1,0,0,452631,2025,Aug,1
+IPLCs ,,,2025/Aug/1,34471825,34471825,57795759.04,2025,Aug,1
+Orange Data,IPLCs ,Orange,2025/Aug/1,6832887,6832887,11522362.72,2025,Aug,1
+Vodafone Data,IPLCs ,Vodafone,2025/Aug/1,13291664,13291664,27003389.66,2025,Aug,1
+NOL,IPLCs ,Etisalat,2025/Aug/1,14347274,14347274,8541666.95,2025,Aug,1
+EGY Net,IPLCs ,Etisalat,2025/Aug/1,0,0,10718849.06,2025,Aug,1
 Mena,IPLCs ,Others,2025/Aug/1,0,0,0,2025,Aug,1
-others,IPLCs ,Others,2025/Aug/1,0,0,9672,2025,Aug,1
- Access Service,,,2025/Aug/1,330493073,330493073,289601223,2025,Aug,1
-Local Loop ,,,2025/Aug/1,8311555,8311555,11286958,2025,Aug,1
-Orange Data,Local Loop ,Orange,2025/Aug/1,1299703,1299703,2415907,2025,Aug,1
-Vodafone Data,Local Loop ,Vodafone,2025/Aug/1,4683495,4683495,5126544,2025,Aug,1
-NOL,Local Loop ,Etisalat,2025/Aug/1,863898,863898,1357631,2025,Aug,1
-EGY Net,Local Loop ,Etisalat,2025/Aug/1,876629,876629,1759917,2025,Aug,1
-Noor,Local Loop ,Others,2025/Aug/1,587829,587829,626959,2025,Aug,1
+others,IPLCs ,Others,2025/Aug/1,0,0,9490.65,2025,Aug,1
+ Access Service,,,2025/Aug/1,330493073,330493073,291976573.2,2025,Aug,1
+Local Loop ,,,2025/Aug/1,8311555,8311555,11286958.12,2025,Aug,1
+Orange Data,Local Loop ,Orange,2025/Aug/1,1299703,1299703,2654487.653,2025,Aug,1
+Vodafone Data,Local Loop ,Vodafone,2025/Aug/1,4683495,4683495,5057582.947,2025,Aug,1
+NOL,Local Loop ,Etisalat,2025/Aug/1,863898,863898,1175151.037,2025,Aug,1
+EGY Net,Local Loop ,Etisalat,2025/Aug/1,876629,876629,1595722.477,2025,Aug,1
+Noor,Local Loop ,Others,2025/Aug/1,587829,587829,804014.0111,2025,Aug,1
 Yalla Misr,Local Loop ,Others,2025/Aug/1,0,0,0,2025,Aug,1
 ADSL ,,,2025/Aug/1,249518,249518,54355,2025,Aug,1
 Orange Data,ADSL ,Orange,2025/Aug/1,56569,56569,13545,2025,Aug,1
@@ -11529,128 +11529,128 @@ NOL,ADSL ,Etisalat,2025/Aug/1,100446,100446,24900,2025,Aug,1
 EGY Net,ADSL ,Etisalat,2025/Aug/1,0,0,0,2025,Aug,1
 Noor,ADSL ,Others,2025/Aug/1,3906,3906,1140,2025,Aug,1
 Yalla Misr,ADSL ,Others,2025/Aug/1,0,0,0,2025,Aug,1
-Bit stream ,,,2025/Aug/1,248720768,248720768,239054789,2025,Aug,1
-Orange Data,Bit stream ,Orange,2025/Aug/1,59645556,59645556,64780450,2025,Aug,1
-Vodafone Data,Bit stream ,Vodafone,2025/Aug/1,130500121,130500121,120702925,2025,Aug,1
-NOL,Bit stream ,Etisalat,2025/Aug/1,57333245,57333245,52347789,2025,Aug,1
+Bit stream ,,,2025/Aug/1,248720768,248720768,239285929.2,2025,Aug,1
+Orange Data,Bit stream ,Orange,2025/Aug/1,59645556,59645556,64934357.52,2025,Aug,1
+Vodafone Data,Bit stream ,Vodafone,2025/Aug/1,130500121,130500121,121013526,2025,Aug,1
+NOL,Bit stream ,Etisalat,2025/Aug/1,57333245,57333245,52129897,2025,Aug,1
 EGY Net,Bit stream ,Etisalat,2025/Aug/1,0,0,0,2025,Aug,1
-Noor,Bit stream ,Others,2025/Aug/1,1241846,1241846,1223626,2025,Aug,1
+Noor,Bit stream ,Others,2025/Aug/1,1241846,1241846,1208148.62,2025,Aug,1
 Yalla Misr,Bit stream ,Others,2025/Aug/1,0,0,0,2025,Aug,1
-FTTS,,,2025/Aug/1,56256667,56256667,9834122,2025,Aug,1
-Orange,FTTS,Orange,2025/Aug/1,0,0,835556,2025,Aug,1
-Vodafone,FTTS,Vodafone,2025/Aug/1,48330000,48330000,2579066,2025,Aug,1
+FTTS,,,2025/Aug/1,56256667,56256667,9834122.284,2025,Aug,1
+Orange,FTTS,Orange,2025/Aug/1,0,0,835555.9361,2025,Aug,1
+Vodafone,FTTS,Vodafone,2025/Aug/1,48330000,48330000,2579066.348,2025,Aug,1
 Etisalat,FTTS,Etisalat,2025/Aug/1,7926667,7926667,6419500,2025,Aug,1
-Fiber Access,,,2025/Aug/1,16954565,16954565,29370998,2025,Aug,1
-Orange Data,Fiber Access,Orange,2025/Aug/1,4283118,4283118,4145517,2025,Aug,1
-Vodafone Data,Fiber Access,Vodafone,2025/Aug/1,9454535,9454535,18989400,2025,Aug,1
-NOL,Fiber Access,Etisalat,2025/Aug/1,2203045,2203045,2678387,2025,Aug,1
-Noor,Fiber Access,Others,2025/Aug/1,1013868,1013868,2391266,2025,Aug,1
-EGY Net,Fiber Access,Etisalat,2025/Aug/1,0,0,1166428,2025,Aug,1
-INT'L OG ,,,2025/Aug/1,7423048,7423048,7831371,2025,Aug,1
+Fiber Access,,,2025/Aug/1,16954565,16954565,31515208.6,2025,Aug,1
+Orange Data,Fiber Access,Orange,2025/Aug/1,4283118,4283118,6359248.853,2025,Aug,1
+Vodafone Data,Fiber Access,Vodafone,2025/Aug/1,9454535,9454535,15730268.66,2025,Aug,1
+NOL,Fiber Access,Etisalat,2025/Aug/1,2203045,2203045,4883781.857,2025,Aug,1
+Noor,Fiber Access,Others,2025/Aug/1,1013868,1013868,3128112.696,2025,Aug,1
+EGY Net,Fiber Access,Etisalat,2025/Aug/1,0,0,1413796.53,2025,Aug,1
+INT'L OG ,,,2025/Aug/1,7423048,7423048,8124714.592,2025,Aug,1
 INT'L OG ,,,2025/Aug/1,0,0,0,2025,Aug,1
 Orange,INT'L OG ,Orange,2025/Aug/1,0,0,0,2025,Aug,1
 Vodafone,INT'L OG ,Vodafone,2025/Aug/1,0,0,0,2025,Aug,1
-ITFS,,,2025/Aug/1,6423048,6423048,6383031,2025,Aug,1
-Etisalat,ITFS,Etisalat,2025/Aug/1,6423048,6423048,6383031,2025,Aug,1
-FVNO,,,2025/Aug/1,1000000,1000000,1448341,2025,Aug,1
-Etisalat,FVNO,Etisalat,2025/Aug/1,1000000,1000000,1419977,2025,Aug,1
-Vodafone,FVNO,Vodafone,2025/Aug/1,0,0,28364,2025,Aug,1
+ITFS,,,2025/Aug/1,6423048,6423048,6658364.422,2025,Aug,1
+Etisalat,ITFS,Etisalat,2025/Aug/1,6423048,6423048,6658364.422,2025,Aug,1
+FVNO,,,2025/Aug/1,1000000,1000000,1466350.17,2025,Aug,1
+Etisalat,FVNO,Etisalat,2025/Aug/1,1000000,1000000,1418998.17,2025,Aug,1
+Vodafone,FVNO,Vodafone,2025/Aug/1,0,0,47352,2025,Aug,1
 RNR,,,2025/Aug/2,0,0,0,2025,Aug,1
 Orange,RNR,Orange,2025/Aug/3,0,0,0,2025,Aug,1
 Vodafone,RNR,Vodafone,2025/Aug/4,0,0,0,2025,Aug,1
 Etisalat,RNR,Etisalat,2025/Aug/5,0,0,0,2025,Aug,1
-Total  Revenues ,,,2025/Sep/1,713914866,,,2025,Sep,1
- Infrastructure Revenues,,,2025/Sep/1,375865209,,,2025,Sep,1
- Transmission Revenues,,,2025/Sep/1,259558445,,,2025,Sep,1
-MNO's Transmission,,,2025/Sep/1,217385000,,,2025,Sep,1
-Orange,MNO's Transmission,Orange,2025/Sep/1,59095833,,,2025,Sep,1
-Vodafone,MNO's Transmission,Vodafone,2025/Sep/1,80226667,,,2025,Sep,1
-Etisalat,MNO's Transmission,Etisalat,2025/Sep/1,78062500,,,2025,Sep,1
-TX IRU ,,,2025/Sep/1,0,,,2025,Sep,1
-Orange,TX IRU ,Orange,2025/Sep/1,0,,,2025,Sep,1
-Vodafone,TX IRU ,Vodafone,2025/Sep/1,0,,,2025,Sep,1
-Etisalat,TX IRU ,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-NCTS,TX IRU ,Others,2025/Sep/1,0,,,2025,Sep,1
-ISP's Transmission ,,,2025/Sep/1,42173445,,,2025,Sep,1
-Orange Data,ISP's Transmission ,Orange,2025/Sep/1,3070833,,,2025,Sep,1
-Vodafone Data,ISP's Transmission ,Vodafone,2025/Sep/1,10940000,,,2025,Sep,1
-NOL,ISP's Transmission ,Etisalat,2025/Sep/1,24980000,,,2025,Sep,1
-EGY Net,ISP's Transmission ,Etisalat,2025/Sep/1,1040833,,,2025,Sep,1
-Noor,ISP's Transmission ,Others,2025/Sep/1,2040494,,,2025,Sep,1
-Yalla Misr,ISP's Transmission ,Others,2025/Sep/1,0,,,2025,Sep,1
-VSAT,ISP's Transmission ,Others,2025/Sep/1,101284,,,2025,Sep,1
- Colocation  Revenues,,,2025/Sep/1,81834939,,,2025,Sep,1
-MNO's Colocation,,,2025/Sep/1,71759083,,,2025,Sep,1
-Orange,MNO's Colocation,Orange,2025/Sep/1,18648773,,,2025,Sep,1
-Vodafone,MNO's Colocation,Vodafone,2025/Sep/1,31949261,,,2025,Sep,1
-Etisalat,MNO's Colocation,Etisalat,2025/Sep/1,21161048,,,2025,Sep,1
-ISP's Colocation,,,2025/Sep/1,10075857,,,2025,Sep,1
-Orange Data,ISP's Colocation,Orange,2025/Sep/1,3110595,,,2025,Sep,1
-Vodafone Data,ISP's Colocation,Vodafone,2025/Sep/1,4879268,,,2025,Sep,1
-NOL,ISP's Colocation,Etisalat,2025/Sep/1,1703358,,,2025,Sep,1
-EGY Net,ISP's Colocation,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-Noor,ISP's Colocation,Others,2025/Sep/1,382636,,,2025,Sep,1
-Yalla Misr,ISP's Colocation,Others,2025/Sep/1,0,,,2025,Sep,1
-International Services,,,2025/Sep/1,34471825,,,2025,Sep,1
-IPT,,,2025/Sep/1,0,,,2025,Sep,1
-Orange Data,IPT,Orange,2025/Sep/1,0,,,2025,Sep,1
-Vodafone Data,IPT,Vodafone,2025/Sep/1,0,,,2025,Sep,1
-NOL,IPT,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-EGY Net,IPT,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-Noor,IPT,Others,2025/Sep/1,0,,,2025,Sep,1
-Etisal,IPT,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-IPLCs ,,,2025/Sep/1,34471825,,,2025,Sep,1
-Orange Data,IPLCs ,Orange,2025/Sep/1,6832887,,,2025,Sep,1
-Vodafone Data,IPLCs ,Vodafone,2025/Sep/1,13291664,,,2025,Sep,1
-NOL,IPLCs ,Etisalat,2025/Sep/1,14347274,,,2025,Sep,1
-EGY Net,IPLCs ,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-Mena,IPLCs ,Others,2025/Sep/1,0,,,2025,Sep,1
-others,IPLCs ,Others,2025/Sep/1,0,,,2025,Sep,1
- Access Service,,,2025/Sep/1,330594494,,,2025,Sep,1
-Local Loop ,,,2025/Sep/1,8272945,,,2025,Sep,1
-Orange Data,Local Loop ,Orange,2025/Sep/1,1234718,,,2025,Sep,1
-Vodafone Data,Local Loop ,Vodafone,2025/Sep/1,4730330,,,2025,Sep,1
-NOL,Local Loop ,Etisalat,2025/Sep/1,859579,,,2025,Sep,1
-EGY Net,Local Loop ,Etisalat,2025/Sep/1,872246,,,2025,Sep,1
-Noor,Local Loop ,Others,2025/Sep/1,576072,,,2025,Sep,1
-Yalla Misr,Local Loop ,Others,2025/Sep/1,0,,,2025,Sep,1
-ADSL ,,,2025/Sep/1,241427,,,2025,Sep,1
-Orange Data,ADSL ,Orange,2025/Sep/1,54307,,,2025,Sep,1
-Vodafone Data,ADSL ,Vodafone,2025/Sep/1,85939,,,2025,Sep,1
-NOL,ADSL ,Etisalat,2025/Sep/1,97433,,,2025,Sep,1
-EGY Net,ADSL ,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-Noor,ADSL ,Others,2025/Sep/1,3749,,,2025,Sep,1
-Yalla Misr,ADSL ,Others,2025/Sep/1,0,,,2025,Sep,1
-Bit stream ,,,2025/Sep/1,248720768,,,2025,Sep,1
-Orange Data,Bit stream ,Orange,2025/Sep/1,59645556,,,2025,Sep,1
-Vodafone Data,Bit stream ,Vodafone,2025/Sep/1,130500121,,,2025,Sep,1
-NOL,Bit stream ,Etisalat,2025/Sep/1,57333245,,,2025,Sep,1
-EGY Net,Bit stream ,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-Noor,Bit stream ,Others,2025/Sep/1,1241846,,,2025,Sep,1
-Yalla Misr,Bit stream ,Others,2025/Sep/1,0,,,2025,Sep,1
-FTTS,,,2025/Sep/1,56256667,,,2025,Sep,1
-Orange,FTTS,Orange,2025/Sep/1,0,,,2025,Sep,1
-Vodafone,FTTS,Vodafone,2025/Sep/1,48330000,,,2025,Sep,1
-Etisalat,FTTS,Etisalat,2025/Sep/1,7926667,,,2025,Sep,1
-Fiber Access,,,2025/Sep/1,17102686,,,2025,Sep,1
-Orange Data,Fiber Access,Orange,2025/Sep/1,4316173,,,2025,Sep,1
-Vodafone Data,Fiber Access,Vodafone,2025/Sep/1,9525884,,,2025,Sep,1
-NOL,Fiber Access,Etisalat,2025/Sep/1,2249803,,,2025,Sep,1
-Noor,Fiber Access,Others,2025/Sep/1,1010826,,,2025,Sep,1
-EGY Net,Fiber Access,Etisalat,2025/Sep/1,0,,,2025,Sep,1
-INT'L OG ,,,2025/Sep/1,7455163,,,2025,Sep,1
-INT'L OG ,,,2025/Sep/1,0,,,2025,Sep,1
-Orange,INT'L OG ,Orange,2025/Sep/1,0,,,2025,Sep,1
-Vodafone,INT'L OG ,Vodafone,2025/Sep/1,0,,,2025,Sep,1
-ITFS,,,2025/Sep/1,6455163,,,2025,Sep,1
-Etisalat,ITFS,Etisalat,2025/Sep/1,6455163,,,2025,Sep,1
-FVNO,,,2025/Sep/1,1000000,,,2025,Sep,1
-Etisalat,FVNO,Etisalat,2025/Sep/1,1000000,,,2025,Sep,1
-Vodafone,FVNO,Vodafone,2025/Sep/1,0,,,2025,Sep,1
-RNR,,,2025/Sep/2,0,0,,2025,Sep,1
-Orange,RNR,Orange,2025/Sep/3,0,0,,2025,Sep,1
-Vodafone,RNR,Vodafone,2025/Sep/4,0,0,,2025,Sep,1
-Etisalat,RNR,Etisalat,2025/Sep/5,0,0,,2025,Sep,1
+Total  Revenues ,,,2025/Sep/1,713914866,713914866.1,803214804.9,2025,Sep,1
+ Infrastructure Revenues,,,2025/Sep/1,375865209,375865209.4,456040990.9,2025,Sep,1
+ Transmission Revenues,,,2025/Sep/1,259558445,259558445.2,301785493,2025,Sep,1
+MNO's Transmission,,,2025/Sep/1,217385000,217385000,251064675,2025,Sep,1
+Orange,MNO's Transmission,Orange,2025/Sep/1,59095833,59095833.33,91342583.33,2025,Sep,1
+Vodafone,MNO's Transmission,Vodafone,2025/Sep/1,80226667,80226666.67,81658175,2025,Sep,1
+Etisalat,MNO's Transmission,Etisalat,2025/Sep/1,78062500,78062500,78063916.67,2025,Sep,1
+TX IRU ,,,2025/Sep/1,0,0,6794747.406,2025,Sep,1
+Orange,TX IRU ,Orange,2025/Sep/1,0,0,5057539.512,2025,Sep,1
+Vodafone,TX IRU ,Vodafone,2025/Sep/1,0,0,0,2025,Sep,1
+Etisalat,TX IRU ,Etisalat,2025/Sep/1,0,0,1474050,2025,Sep,1
+NCTS,TX IRU ,Others,2025/Sep/1,0,0,263157.8947,2025,Sep,1
+ISP's Transmission ,,,2025/Sep/1,42173445,42173445.2,43926070.61,2025,Sep,1
+Orange Data,ISP's Transmission ,Orange,2025/Sep/1,3070833,3070833.333,4514397.083,2025,Sep,1
+Vodafone Data,ISP's Transmission ,Vodafone,2025/Sep/1,10940000,10940000,10957736.67,2025,Sep,1
+NOL,ISP's Transmission ,Etisalat,2025/Sep/1,24980000,24980000,24980000,2025,Sep,1
+EGY Net,ISP's Transmission ,Etisalat,2025/Sep/1,1040833,1040833.333,1040833.333,2025,Sep,1
+Noor,ISP's Transmission ,Others,2025/Sep/1,2040494,2040494.065,2319226.56,2025,Sep,1
+Yalla Misr,ISP's Transmission ,Others,2025/Sep/1,0,0,0,2025,Sep,1
+VSAT,ISP's Transmission ,Others,2025/Sep/1,101284,101284.4696,113876.9675,2025,Sep,1
+ Colocation  Revenues,,,2025/Sep/1,81834939,81834939.25,89272960.48,2025,Sep,1
+MNO's Colocation,,,2025/Sep/1,71759083,71759082.53,76534594.45,2025,Sep,1
+Orange,MNO's Colocation,Orange,2025/Sep/1,18648773,18648773.33,20468414.22,2025,Sep,1
+Vodafone,MNO's Colocation,Vodafone,2025/Sep/1,31949261,31949261.11,34780159.39,2025,Sep,1
+Etisalat,MNO's Colocation,Etisalat,2025/Sep/1,21161048,21161048.09,21286020.83,2025,Sep,1
+ISP's Colocation,,,2025/Sep/1,10075857,10075856.72,12738366.04,2025,Sep,1
+Orange Data,ISP's Colocation,Orange,2025/Sep/1,3110595,3110594.977,3849015.862,2025,Sep,1
+Vodafone Data,ISP's Colocation,Vodafone,2025/Sep/1,4879268,4879267.861,6215828.278,2025,Sep,1
+NOL,ISP's Colocation,Etisalat,2025/Sep/1,1703358,1703358.211,1449544.262,2025,Sep,1
+EGY Net,ISP's Colocation,Etisalat,2025/Sep/1,0,0,781816.0383,2025,Sep,1
+Noor,ISP's Colocation,Others,2025/Sep/1,382636,382635.6718,442161.595,2025,Sep,1
+Yalla Misr,ISP's Colocation,Others,2025/Sep/1,0,0,0,2025,Sep,1
+International Services,,,2025/Sep/1,34471825,34471824.92,64982537.39,2025,Sep,1
+IPT,,,2025/Sep/1,0,0,5135226.161,2025,Sep,1
+Orange Data,IPT,Orange,2025/Sep/1,0,0,0,2025,Sep,1
+Vodafone Data,IPT,Vodafone,2025/Sep/1,0,0,4301946.161,2025,Sep,1
+NOL,IPT,Etisalat,2025/Sep/1,0,0,372000,2025,Sep,1
+EGY Net,IPT,Etisalat,2025/Sep/1,0,0,0,2025,Sep,1
+Noor,IPT,Others,2025/Sep/1,0,0,0,2025,Sep,1
+Etisal,IPT,Etisalat,2025/Sep/1,0,0,461280,2025,Sep,1
+IPLCs ,,,2025/Sep/1,34471825,34471824.92,59847311.22,2025,Sep,1
+Orange Data,IPLCs ,Orange,2025/Sep/1,6832887,6832886.928,13941894.26,2025,Sep,1
+Vodafone Data,IPLCs ,Vodafone,2025/Sep/1,13291664,13291664.22,22229264.77,2025,Sep,1
+NOL,IPLCs ,Etisalat,2025/Sep/1,14347274,14347273.78,10756540.98,2025,Sep,1
+EGY Net,IPLCs ,Etisalat,2025/Sep/1,0,0,12909939.21,2025,Sep,1
+Mena,IPLCs ,Others,2025/Sep/1,0,0,0,2025,Sep,1
+others,IPLCs ,Others,2025/Sep/1,0,0,9672,2025,Sep,1
+ Access Service,,,2025/Sep/1,330594494,330594493.5,340444283.9,2025,Sep,1
+Local Loop ,,,2025/Sep/1,8272945,8272945.212,10749090.51,2025,Sep,1
+Orange Data,Local Loop ,Orange,2025/Sep/1,1234718,1234717.757,2527990.954,2025,Sep,1
+Vodafone Data,Local Loop ,Vodafone,2025/Sep/1,4730330,4730330.363,4816569.376,2025,Sep,1
+NOL,Local Loop ,Etisalat,2025/Sep/1,859579,859578.9831,1119150.502,2025,Sep,1
+EGY Net,Local Loop ,Etisalat,2025/Sep/1,872246,872246.0475,1519680.071,2025,Sep,1
+Noor,Local Loop ,Others,2025/Sep/1,576072,576072.0609,765699.6048,2025,Sep,1
+Yalla Misr,Local Loop ,Others,2025/Sep/1,0,0,0,2025,Sep,1
+ADSL ,,,2025/Sep/1,241427,241427.2487,51395,2025,Sep,1
+Orange Data,ADSL ,Orange,2025/Sep/1,54307,54306.5682,13445,2025,Sep,1
+Vodafone Data,ADSL ,Vodafone,2025/Sep/1,85939,85938.63498,12960,2025,Sep,1
+NOL,ADSL ,Etisalat,2025/Sep/1,97433,97432.62322,23980,2025,Sep,1
+EGY Net,ADSL ,Etisalat,2025/Sep/1,0,0,0,2025,Sep,1
+Noor,ADSL ,Others,2025/Sep/1,3749,3749.422337,1010,2025,Sep,1
+Yalla Misr,ADSL ,Others,2025/Sep/1,0,0,0,2025,Sep,1
+Bit stream ,,,2025/Sep/1,248720768,248720768.3,235829697.5,2025,Sep,1
+Orange Data,Bit stream ,Orange,2025/Sep/1,59645556,59645555.81,63526107.72,2025,Sep,1
+Vodafone Data,Bit stream ,Vodafone,2025/Sep/1,130500121,130500121,120732308.8,2025,Sep,1
+NOL,Bit stream ,Etisalat,2025/Sep/1,57333245,57333245.27,50400620.68,2025,Sep,1
+EGY Net,Bit stream ,Etisalat,2025/Sep/1,0,0,0,2025,Sep,1
+Noor,Bit stream ,Others,2025/Sep/1,1241846,1241846.177,1170660.229,2025,Sep,1
+Yalla Misr,Bit stream ,Others,2025/Sep/1,0,0,0,2025,Sep,1
+FTTS,,,2025/Sep/1,56256667,56256666.67,51688639.88,2025,Sep,1
+Orange,FTTS,Orange,2025/Sep/1,0,0,835555.9361,2025,Sep,1
+Vodafone,FTTS,Vodafone,2025/Sep/1,48330000,48330000,44433583.94,2025,Sep,1
+Etisalat,FTTS,Etisalat,2025/Sep/1,7926667,7926666.667,6419500,2025,Sep,1
+Fiber Access,,,2025/Sep/1,17102686,17102686.12,42125461.07,2025,Sep,1
+Orange Data,Fiber Access,Orange,2025/Sep/1,4316173,4316173.142,8500222.653,2025,Sep,1
+Vodafone Data,Fiber Access,Vodafone,2025/Sep/1,9525884,9525884.278,21026191.79,2025,Sep,1
+NOL,Fiber Access,Etisalat,2025/Sep/1,2249803,2249802.666,6528008.91,2025,Sep,1
+Noor,Fiber Access,Others,2025/Sep/1,1010826,1010826.035,4181257.097,2025,Sep,1
+EGY Net,Fiber Access,Etisalat,2025/Sep/1,0,0,1889780.628,2025,Sep,1
+INT'L OG ,,,2025/Sep/1,7455163,7455163.222,6729530.105,2025,Sep,1
+INT'L OG ,,,2025/Sep/1,0,0,0,2025,Sep,1
+Orange,INT'L OG ,Orange,2025/Sep/1,0,0,0,2025,Sep,1
+Vodafone,INT'L OG ,Vodafone,2025/Sep/1,0,0,0,2025,Sep,1
+ITFS,,,2025/Sep/1,6455163,6455163.222,6698730.105,2025,Sep,1
+Etisalat,ITFS,Etisalat,2025/Sep/1,6455163,6455163.222,6698730.105,2025,Sep,1
+FVNO,,,2025/Sep/1,1000000,1000000,30800,2025,Sep,1
+Etisalat,FVNO,Etisalat,2025/Sep/1,1000000,1000000,0,2025,Sep,1
+Vodafone,FVNO,Vodafone,2025/Sep/1,0,0,30800,2025,Sep,1
+RNR,,,2025/Sep/2,0,0,0,2025,Sep,1
+Orange,RNR,Orange,2025/Sep/3,0,0,0,2025,Sep,1
+Vodafone,RNR,Vodafone,2025/Sep/4,0,0,0,2025,Sep,1
+Etisalat,RNR,Etisalat,2025/Sep/5,0,0,0,2025,Sep,1
 Total  Revenues ,,,2025/Oct/1,731885802,,,2025,Oct,1
  Infrastructure Revenues,,,2025/Oct/1,377465592,,,2025,Oct,1
  Transmission Revenues,,,2025/Oct/1,259536958,,,2025,Oct,1
