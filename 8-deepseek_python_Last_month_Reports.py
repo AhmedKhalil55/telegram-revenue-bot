@@ -514,7 +514,7 @@ def get_main_keyboard():
     keyboard = [
         ["📊 Total Revenues", "📈 Service Trends"],
         ["📅 Monthly Trends", "🆚 Compare Operators"],
-        ["📋 Summary Report", "🔧 All Services"],
+        ["📋 Operators Summary", "🔧 All Services"],
         ["📄 Last Month Reports", "🤖 Smart AI"],
         ["📞 Help", "🔄 Last Query"]
     ]
@@ -553,12 +553,12 @@ def get_operators_keyboard():
     """لوحة اختيار المشغلين"""
     keyboard = [
         [
-            InlineKeyboardButton("📱 Vodafone", callback_data="op_vodafone"),
-            InlineKeyboardButton("🌟 Etisalat", callback_data="op_etisalat")
+            InlineKeyboardButton("🔴 Vodafone", callback_data="op_vodafone"),
+            InlineKeyboardButton("🟢 Etisalat", callback_data="op_etisalat")
         ],
         [
-            InlineKeyboardButton("🍊 Orange", callback_data="op_orange"),
-            InlineKeyboardButton("👥 Others", callback_data="op_others")
+            InlineKeyboardButton("🟠 Orange", callback_data="op_orange"),
+            InlineKeyboardButton("🔵 Others", callback_data="op_others")
         ],
         [
             InlineKeyboardButton("🌍 All Operators", callback_data="op_all"),
@@ -713,7 +713,7 @@ async def generate_bar_chart(query, service=None, year=None, operator=None):
         plt.figure(figsize=(8, 5))
         services = ['Infrastructure', 'Access', 'Voice']
         values = [total_infra, total_access, total_voice]
-        bars = plt.bar(services, values, color=['#FF6B6B', '#4ECDC4', '#45B7D1'])
+        bars = plt.bar(services, values, color=["#9e3479", '#573b92', '#893395'])
         plt.title(f"Services Comparison {year if year else 'All Years'}")
         plt.ylabel("Revenue")
         for bar in bars:
@@ -755,7 +755,7 @@ async def generate_comparison_chart(query, year=None):
     plt.figure(figsize=(10, 6))
     operators = list(op_data.keys())
     values = list(op_data.values())
-    colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#95E77E']
+    colors = ['#ff0000', '#92d050', '#ff7900', '#4dc9ef']
     bars = plt.bar(operators, values, color=colors[:len(operators)])
     plt.title(f"Operators Comparison {year if year else 'All Years'}")
     plt.ylabel("Revenue")
@@ -1179,7 +1179,8 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
         elif session.current_action == "compare_two_step2":
             # Second operator selected, do comparison
             first_op = session.selected_operator
-            await compare_two_operators(query, first_op, operator)
+            year = session.selected_year
+            await compare_two_operators(query, first_op, operator, year)
             session.reset()
 
     # Handle year selection
@@ -1203,6 +1204,14 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
             # Generate comparison for all operators for this year
             await generate_comparison_chart(query, year)
             session.reset()
+
+        elif session.current_action == "compare_two_year":
+            # Year selected for two operators comparison, now select first operator
+            await query.edit_message_text(
+                f"📅 تم اختيار السنة {year}. اختر المشغل الأول:",
+                reply_markup=get_operators_keyboard()
+            )
+            session.current_action = "compare_two_step1"
 
     # Handle AI quick questions
     elif data.startswith("ai_"):
@@ -1276,29 +1285,32 @@ async def compare_service_operators(query, service):
     
     await query.edit_message_text("\n".join(lines), parse_mode="HTML")
 
-async def compare_two_operators(query, op1, op2):
+async def compare_two_operators(query, op1, op2, year=None):
     """Compare two operators"""
     q = df.copy()
-    
+    if year:
+        q = q[q["Year"] == int(year)]
+
     # Get data for operator 1
     op1_aliases = OP_GROUPS.get(op1, [])
     op1_df = q[q["_op_norm"].isin(op1_aliases)]
     op1_total = op1_df["YTD Actual"].sum()
-    
+
     # Get data for operator 2
     op2_aliases = OP_GROUPS.get(op2, [])
     op2_df = q[q["_op_norm"].isin(op2_aliases)]
     op2_total = op2_df["YTD Actual"].sum()
-    
+
+    ytxt = f" {year}" if year else ""
     winner = "🟢" if op1_total > op2_total else "🔵" if op2_total > op1_total else "🟰"
-    
+
     reply = (
-        f"🆚 <b>Compare: {op1.upper()} vs {op2.upper()}</b>\n"
+        f"🆚 <b>Compare: {op1.upper()} vs {op2.upper()}{ytxt}</b>\n"
         f"🟢 {op1.capitalize()}: {format_num(op1_total)}\n"
         f"🔵 {op2.capitalize()}: {format_num(op2_total)}\n"
         f"{winner} <b>Winner</b>"
     )
-    
+
     await query.edit_message_text(reply, parse_mode="HTML")
 
 # =========================
@@ -1361,7 +1373,7 @@ async def handle_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
             ])
         )
 
-    elif text == "📋 Summary Report":
+    elif text == "📋 Operator Summary":
         session.current_action = "summary"
         await update.message.reply_text(
             "📅 اختر السنة:",
@@ -1485,7 +1497,7 @@ HELP_TEXT = (
     "• /monthly_trend total revenues\n"
     "• /chart adsl\n"
     "• /compare_main 2025\n"
-    "• /compare_tx_budget transmission 2025\n"
+    "• /compare_Actual_budget transmission 2025\n"
     "• /summary 2025\n"
     "• /services\n"
     "• /last"
@@ -1506,7 +1518,7 @@ HELP_TEXT_AR = (
     "• /monthly_trend إجمالي الإيرادات\n"
     "• /chart ادسل\n"
     "• /compare_main 2025\n"
-    "• /compare_tx_budget ترانسميشن 2025\n"
+    "• /compare_Actual_budget ترانسميشن 2025\n"
     "• /summary 2025\n"
     "• /services\n"
     "• /last"
@@ -1726,11 +1738,11 @@ async def compare_main(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     await update.message.reply_text(reply, parse_mode="HTML")
 
-async def compare_tx_budget(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def compare_Actual_budget(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not context.args:
         await update.message.reply_text(
-            "❌ Use: /compare_tx_budget <service> [year]\n"
-            "Example: /compare_tx_budget transmission 2025",
+            "❌ Use: /compare_Actual_budget <service> [year]\n"
+            "Example: /compare_Actual_budget transmission 2025",
             parse_mode="HTML"
         )
         return
@@ -2027,7 +2039,7 @@ def main():
     app.add_handler(CommandHandler("chart", chart))
     app.add_handler(CommandHandler("monthly_trend", monthly_trend))
     app.add_handler(CommandHandler("compare_main", compare_main))
-    app.add_handler(CommandHandler("compare_tx_budget", compare_tx_budget))
+    app.add_handler(CommandHandler("compare_Actual_budget", compare_Actual_budget))
     app.add_handler(CommandHandler("stats", stats))
     app.add_handler(CommandHandler("ai", ai))
     app.add_handler(CommandHandler("report", report))
@@ -2043,7 +2055,7 @@ def main():
 
     logger.info("🚀 Revenue Bot is running via Webhook...")
 
-    # ---🔗 Webhook Settings for Render ---
+    # ---� Webhook Settings for Render ---
     app.run_webhook(
         listen="0.0.0.0",
         port=int(os.getenv("PORT", 10000)),
