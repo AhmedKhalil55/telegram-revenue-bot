@@ -50,10 +50,34 @@ logger.addHandler(console)
 # =========================
 # Google Gemini Setup
 # =========================
+def validate_gemini_api():
+    """Validate Gemini API key by making a simple test call"""
+    if not GEMINI_API_KEY:
+        return False, "No API key provided"
+
+    try:
+        genai.configure(api_key=GEMINI_API_KEY)
+        model = genai.GenerativeModel("gemini-1.5-flash")
+        # Simple test prompt
+        response = model.generate_content("Hello")
+        if response and response.text:
+            return True, "API key is valid"
+        else:
+            return False, "API returned empty response"
+    except ValueError as e:
+        return False, f"Invalid API key: {e}"
+    except Exception as e:
+        return False, f"API test failed: {e}"
+
 if GEMINI_API_KEY:
-    genai.configure(api_key=GEMINI_API_KEY)
-    gemini_model = genai.GenerativeModel("gemini-1.5-flash")
-    logger.info("🧠 Gemini AI Agent is ready.")
+    is_valid, message = validate_gemini_api()
+    if is_valid:
+        gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+        logger.info("🧠 Gemini AI Agent is ready.")
+    else:
+        gemini_model = None
+        logger.error(f"❌ Gemini API validation failed: {message}")
+        logger.warning("⚠️ Gemini AI features disabled due to API issues.")
 else:
     gemini_model = None
     logger.warning("⚠️ Gemini API Key not found. AI features disabled.")
@@ -66,9 +90,18 @@ def ask_gemini(prompt: str) -> str:
     try:
         response = gemini_model.generate_content(prompt)
         return response.text.strip()
+    except genai.types.generation_types.StopCandidateException as e:
+        logger.error(f"❌ Gemini StopCandidateException: {e}")
+        return "عذرًا، الذكاء الاصطناعي رفض الإجابة على هذا السؤال."
+    except genai.types.generation_types.BlockedPromptException as e:
+        logger.error(f"❌ Gemini BlockedPromptException: {e}")
+        return "عذرًا، السؤال محظور من قبل الذكاء الاصطناعي."
+    except ValueError as e:
+        logger.error(f"❌ Gemini ValueError (possibly invalid API key): {e}")
+        return "❌ خطأ في مفتاح API الخاص بالذكاء الاصطناعي. يرجى التحقق من صحة المفتاح."
     except Exception as e:
-        logger.error(f"❌ خطأ في Gemini: {e}")
-        return "عذرًا، تعذر الاتصال بالذكاء الاصطناعي."
+        logger.error(f"❌ خطأ عام في Gemini: {e}")
+        return "عذرًا، تعذر الاتصال بالذكاء الاصطناعي. قد يكون هناك مشكلة في الشبكة أو الحصة."
 
 # =========================
 # Helpers
