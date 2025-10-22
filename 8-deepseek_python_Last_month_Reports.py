@@ -50,58 +50,77 @@ logger.addHandler(console)
 # =========================
 # Google Gemini Setup
 # =========================
+import google.generativeai as genai
+
 def validate_gemini_api():
-    """Validate Gemini API key by making a simple test call"""
+    """✅ Validate Gemini API key by making a simple test call"""
     if not GEMINI_API_KEY:
         return False, "No API key provided"
 
     try:
+        # Configure Gemini API
         genai.configure(api_key=GEMINI_API_KEY)
-        model = genai.GenerativeModel("gemini-1.5-flash")
-        # Simple test prompt
-        response = model.generate_content("Hello")
-        if response and response.text:
-            return True, "API key is valid"
+
+        # Use the latest stable model
+        model = genai.GenerativeModel("gemini-1.5-flash-latest")  # or "gemini-1.5-pro-latest"
+
+        # Simple validation test
+        response = model.generate_content("Hello Gemini! Please confirm you're active.")
+        if response and hasattr(response, "text") and response.text:
+            return True, "API key is valid and model is responsive."
         else:
-            return False, "API returned empty response"
+            return False, "API returned an empty response."
+
     except ValueError as e:
         return False, f"Invalid API key: {e}"
     except Exception as e:
         return False, f"API test failed: {e}"
 
+
+# =========================
+# Validate & Initialize Model
+# =========================
 if GEMINI_API_KEY:
     is_valid, message = validate_gemini_api()
     if is_valid:
-        gemini_model = genai.GenerativeModel("gemini-1.5-flash")
-        logger.info("🧠 Gemini AI Agent is ready.")
+        gemini_model = genai.GenerativeModel("gemini-1.5-flash-latest")
+        logger.info("🧠 Gemini AI Agent is ready and connected.")
     else:
         gemini_model = None
         logger.error(f"❌ Gemini API validation failed: {message}")
-        logger.warning("⚠️ Gemini AI features disabled due to API issues.")
+        logger.warning("⚠️ Gemini AI features disabled due to API validation failure.")
 else:
     gemini_model = None
     logger.warning("⚠️ Gemini API Key not found. AI features disabled.")
 
+
+# =========================
+# Gemini Query Function
+# =========================
 def ask_gemini(prompt: str) -> str:
-    """Ask Gemini and return response"""
+    """💬 Send a prompt to Gemini and return the response text"""
     if not gemini_model:
         return "❌ ميزة الذكاء الاصطناعي غير متاحة حاليًا."
 
     try:
         response = gemini_model.generate_content(prompt)
         return response.text.strip()
+
     except genai.types.generation_types.StopCandidateException as e:
         logger.error(f"❌ Gemini StopCandidateException: {e}")
         return "عذرًا، الذكاء الاصطناعي رفض الإجابة على هذا السؤال."
+
     except genai.types.generation_types.BlockedPromptException as e:
         logger.error(f"❌ Gemini BlockedPromptException: {e}")
         return "عذرًا، السؤال محظور من قبل الذكاء الاصطناعي."
+
     except ValueError as e:
         logger.error(f"❌ Gemini ValueError (possibly invalid API key): {e}")
         return "❌ خطأ في مفتاح API الخاص بالذكاء الاصطناعي. يرجى التحقق من صحة المفتاح."
+
     except Exception as e:
         logger.error(f"❌ خطأ عام في Gemini: {e}")
-        return "عذرًا، تعذر الاتصال بالذكاء الاصطناعي. قد يكون هناك مشكلة في الشبكة أو الحصة."
+        return "عذرًا، تعذر الاتصال بالذكاء الاصطناعي. قد يكون هناك مشكلة في الشبكة أو الحصة المحددة."
 
 # =========================
 # Helpers
