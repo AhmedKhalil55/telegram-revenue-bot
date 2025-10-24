@@ -359,21 +359,7 @@ SERVICE_SYNONYMS = {
 # User Last Query
 # =========================
 user_last_query = {}
-# =========================
-# Smart Auto-Reply Core (to be used later)
-# =========================
-async def handle_general_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """🤖 Respond intelligently to any message using Gemini"""
-    user_text = update.message.text.strip()
-    user_id = update.effective_user.id
 
-    logger.info(f"💬 Received general message from {user_id}: {user_text}")
-
-    # Use Gemini to generate a smart reply
-    ai_reply = ask_gemini(user_text)
-
-    # Send Gemini's response back to the user
-    await update.message.reply_text(ai_reply)
 # =========================
 # Query Logging (CSV)
 # =========================
@@ -386,18 +372,12 @@ if not os.path.exists("user_queries.csv"):
         writer = csv.writer(f)
         writer.writerow(["Timestamp", "User ID", "Username", "First Name", "Text"])
 
-def log_query(user_id: int, username: str, first_name: str, text: str, response: str = None):
-    """Log user query and bot response to CSV"""
+def log_query(user_id: int, username: str, first_name: str, text: str):
+    """Log user query to CSV"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    file_exists = os.path.exists("user_queries.csv")
-
     with open("user_queries.csv", "a", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
-        # لو الملف جديد نضيف الهيدر
-        if not file_exists:
-            writer.writerow(["Timestamp", "User ID", "Username", "First Name", "Text", "Response"])
-        writer.writerow([timestamp, user_id, username, first_name, text, response or ""])
-
+        writer.writerow([timestamp, user_id, username, first_name, text])
 
 # قائمة لتحليل الأسئلة الشائعة
 query_log = []
@@ -686,30 +666,7 @@ def get_ai_questions_keyboard():
         [InlineKeyboardButton("❌ Cancel", callback_data="cancel")]
     ]
     return InlineKeyboardMarkup(keyboard)
-# =========================
-# Smart Dynamic Answer System
-# =========================
-def generate_dynamic_answer(user_text: str) -> str:
-    """
-    🧠 دمج بين المنطق التحليلي والدعم الذكي من Gemini.
-    - يحاول أولاً تحليل الرسالة بدقة باستخدام compute_answer()
-    - لو فشل أو ما طلعش نتيجة واضحة، بيستعين بـ Gemini لتوليد رد ذكي
-    """
-    try:
-        # جرّب تستخدم النظام التحليلي الأساسي أولاً
-        base_answer = compute_answer(user_text)
 
-        # لو الرد التحليلي طلع رسالة فشل أو عامّة، استخدم Gemini
-        if base_answer.startswith("❌") or "I couldn't detect" in base_answer:
-            logger.info("🤖 Switching to Gemini AI for dynamic response...")
-            return ask_gemini(f"User asked: {user_text}\nPlease answer professionally in English or Arabic depending on input.")
-        
-        return base_answer
-
-    except Exception as e:
-        logger.error(f"⚠️ Dynamic Answer Error: {e}")
-        # في حال حصل خطأ، نرجع رد ذكي من Gemini
-        return ask_gemini(f"Analyze and answer this question as a data analyst assistant: {user_text}")
 # =========================
 # User Session Management
 # =========================
@@ -1178,35 +1135,7 @@ async def handle_ai_quick_question(query, ai_type):
         await query.edit_message_text(ai_reply)
     else:
         await query.edit_message_text("❌ ميزة الذكاء الاصطناعي غير متاحة حاليًا.")
-# =========================
-# 🔮 Universal AI Response Handler
-# =========================
-async def handle_dynamic_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """
-    🧠 رد تلقائي ذكي على أي رسالة من المستخدم.
-    - يحاول أولاً تحليلها بالمنطق العادي (compute_answer)
-    - لو فشل → يرد باستخدام Gemini AI
-    """
-    user = update.message.from_user
-    user_text = update.message.text.strip()
 
-    # سجل الاستفسار
-    log_query(user.id, user.username or "", user.first_name or "", user_text)
-    logger.info(f"📩 Message from {user.first_name} ({user.id}): {user_text}")
-
-    try:
-        # استخدم النظام الديناميكي الجديد اللي أضفناه قبل كده
-        response = generate_dynamic_answer(user_text)
-
-        # أرسل الرد للمستخدم
-        await update.message.reply_text(response, parse_mode="HTML")
-
-    except Exception as e:
-        logger.error(f"❌ Error in handle_dynamic_message: {e}")
-        await update.message.reply_text(
-            "❌ حدث خطأ أثناء معالجة الرسالة. يرجى المحاولة لاحقًا.",
-            parse_mode="HTML"
-        )
 # =========================
 # Fixed Callback Handler
 # =========================
@@ -1591,18 +1520,6 @@ async def handle_text_query(update: Update, context: ContextTypes.DEFAULT_TYPE):
             ai_reply,
             reply_markup=get_main_keyboard()
         )
-            # Fallback auto reply for unclear messages
-    if not gemini_model:
-        fallback_replies = [
-            "🤔 ممكن توضح أكتر سؤالك؟ مثلًا اذكر اسم الخدمة أو السنة.",
-            "📊 جرب تقول: 'إيرادات فودافون 2025' أو 'Transmission Etisalat'.",
-            "💡 ممكن أقارن الإيرادات أو أعمل تحليل لو وضحت المطلوب أكتر."
-        ]
-        reply = random.choice(fallback_replies)
-        await update.message.reply_text(reply, reply_markup=get_main_keyboard())
-        log_query(user_id, username, first_name, text, reply)
-        return
-
     else:
         await update.message.reply_text(
             "❌ ميزة الذكاء الاصطناعي غير متاحة.",
@@ -2150,28 +2067,6 @@ async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
         lines.append(f"{i}. <code>{q}</code> → <b>{count}</b> time(s)")
 
     await update.message.reply_text("\n".join(lines), parse_mode="HTML")
-# =========================
-# Generic Auto Reply (AI Chat)
-# =========================
-async def auto_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """رد تلقائي ذكي على أي رسالة نصية"""
-    user_message = update.message.text.strip()
-    user_id = update.effective_user.id
-    username = update.effective_user.username or "Unknown"
-
-    logger.info(f"💬 [Auto Reply] {username} ({user_id}): {user_message}")
-
-    # لو Gemini متاح
-    if gemini_model:
-        prompt = f"""
-        أنت بوت ذكاء اصطناعي متخصص في تحليل البيانات والإيرادات في قطاع الاتصالات.
-        السؤال: "{user_message}"
-        أجب باحترافية وبأسلوب واضح ومبسط.
-        """
-        ai_response = ask_gemini(prompt)
-        await update.message.reply_text(ai_response)
-    else:
-        await update.message.reply_text("🤖 حالياً ميزة الذكاء الاصطناعي غير متاحة. استخدم الأوامر من القائمة.")
 
 # =========================
 # Run bot
@@ -2196,11 +2091,10 @@ def main():
     app.add_handler(CommandHandler("ai", ai))
     app.add_handler(CommandHandler("report", report))
 
-        # ✅ Callback query handler
+    # ✅ Callback query handler
     app.add_handler(CallbackQueryHandler(handle_callback_query))
 
     # ✅ Message handlers
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, auto_reply))
     app.add_handler(MessageHandler(
         filters.TEXT & ~filters.COMMAND,
         handle_main_menu
